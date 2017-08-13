@@ -102,6 +102,8 @@ public class Simulator {
 
 
         //Calculating the average time.
+        if(requests == 0)
+            throw new IllegalArgumentException("\nThere were 0 requests");
         averageWaitTime = (double) totalWaitTime / requests;
 
         //Printing statistics.
